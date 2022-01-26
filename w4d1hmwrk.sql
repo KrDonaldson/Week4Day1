@@ -45,11 +45,11 @@ WHERE last_name LIKE '%es' and store_id = 1;
 
 -- 9. How many payment amounts had a number of rentals above 250 for customers
 -- with ids between 380 and 430?(use group by and having > 250)
-SELECT DISTINCT amount, COUNT(amount)
+SELECT DISTINCT amount
 FROM payment
 WHERE customer_id BETWEEN 380 AND 430
 GROUP BY amount
-HAVING count(amount) > 250;
+HAVING COUNT(amount) > 250;
 
 -- 3. I have tried SELECT COUNT(DISTINCT amount) but that returns 11
 
